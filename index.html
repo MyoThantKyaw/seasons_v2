@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link type="text/css" rel="stylesheet" href="libs/materialize/css/materialize.min.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="v2-ui.css" />
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+</head>
+
+<body>
+
+    <div id="preloader">
+        <p>
+            Loading...
+        </p>
+    </div>
+
+    <div id="root-container">
+        <a id="btn-settings" class="btn-floating waves-effect waves-light grey darken-3"><i
+                class="material-icons">settings</i></a>
+
+        <div id="toolbar">
+
+            <div id="current-date-display">
+                <i class="material-icons">date_range</i>
+                <span id="date-display-day">
+                    23
+                </span>/
+                <span id="date-display-month">
+                    3
+                </span>/
+                <span id="date-display-year">
+                    2020
+                </span>
+            </div>
+
+            <div id="toolbar-seperator">
+            </div>
+
+            <button disabled id="btn-prev-days" class="v2 v2-button v2-drak waves-effect waves-white">
+                <i id="icon-btn-prev-days" class="material-icons">navigate_before</i>
+            </button>
+
+            <button id="btn-play-puase-earth-revolving" class="v2 v2-button v2-drak waves-effect waves-white">
+                <i id="icon-play-puase-earth-revolving" class="material-icons">pause</i>
+            </button>
+
+
+            <button disabled id="btn-next-days" class="v2 v2-button v2-drak waves-effect waves-white">
+                <i id="icon-btn-next-days" class="material-icons">navigate_next</i>
+            </button>
+
+        </div>
+
+
+
+        <div id="menu" class="">
+
+            <label id="lb-stop-at-sol-equ" class="v2-drak">
+                <input id="chk-stop-at-sol-equ" class="v2 v2-checkbox v2-drak" type="checkbox" />
+                <span>Stop at Solstices and Equinoxes</span>
+            </label>
+
+
+            <label class="description sub-item">Earth Revolution Speed</label>
+            <div id="spinner-earth-rev-speed" class="v2 v2-spinner v2-drak" style="width: 90px;">
+                <i id="btn-earth-rev-speed-dec" class="material-icons waves-effect waves-white">remove</i>
+                <span id="value-earth-rev-speed">2</span>
+                <i id="btn-earth-rev-speed-inc" class="material-icons waves-effect waves-white">add</i>
+            </div>
+
+
+
+
+            <label class="v2-drak">
+                <input id="chk-play-puase-earth" class="v2 v2-checkbox v2-drak" type="checkbox" checked />
+                <span>Earth Rotation</span>
+            </label>
+
+            <label class="sub-item description">
+                Speed
+            </label>
+            <div class="v2 v2-spinner v2-drak sub-item">
+                <i id="btn-earth-rot-speed-dec" class="material-icons waves-effect waves-white">remove</i>
+                <span id="value-earth-rot-speed">12.33</span>
+                <i id="btn-earth-rot-speed-inc" class="material-icons waves-effect waves-white">add</i>
+            </div>
+
+            <label class="v2-drak">
+                <input id="chk-show-earth-axis" class="v2 v2-checkbox v2-drak" type="checkbox" checked />
+                <span>Show Earth Rotation Axis</span>
+            </label>
+
+            <label class="v2-drak">
+                <input id="chk-show-earth-inc-plane" class="v2 v2-checkbox v2-drak" type="checkbox" checked />
+                <span>Show Inclination Helper</span>
+            </label>
+
+            <label class="v2-drak sub-item">
+                <input id="chk-show-earth-inc-angle" class="v2 v2-checkbox v2-drak" type="checkbox" />
+                <span>Show Inclination Angle</span>
+            </label>
+
+            <label class="v2-drak">
+                <input id="chk-latitude-lines" class="v2 v2-checkbox v2-drak" type="checkbox" />
+                <span>Latitude Lines</span>
+            </label>
+
+            <label class="v2-drak">
+                <input id="chk-sunlight-rays" class="v2 v2-checkbox v2-drak" type="checkbox" />
+                <span>Sunlight Rays</span>
+            </label>
+
+            <div id="about">
+                About
+            </div>
+
+        </div>
+        <div id="view-3d">
+        </div>
+
+        <a id="btn-home-view" class="btn-floating waves-effect waves-light grey darken-3"><i
+                class="material-icons">home</i></a>
+        <a id="btn-normal-view" class="btn-floating waves-effect waves-light grey darken-3"><i
+                class="material-icons">vertical_align_top</i></a>
+
+        <div id="solsticEquinoxLinks">
+            <p>Solstices and Equinoxes</p>
+            <div>
+                <span id="link-march-equinox" class="equinox">March</span>
+                <span id="link-june-solstice" class="solstice">June</span>
+                <span id="link-sept-equinox" class="equinox">Sept</span>
+                <span id="link-dec-solstice" class="solstice">Dec</span>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Modal Header</h4>
+          <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+      </div>
+    
+
+    <script type="text/javascript" src="libs/materialize/js/materialize.min.js"></script>
+    <script src="app_bundle_3d.js"></script>
+</body>
+
+</html>
